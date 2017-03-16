@@ -1,0 +1,17 @@
+This is the iconic image of a Hidden Markov Model. There is some state (x) that changes with time (markov). And you want to estimate or track it. Unfortunately, you cannot directly observe this state (hidden). That's the hidden part. But, you can observe something correlated with the state (y).
+
+For example, let's say you want to know if your wife is upset with you (x). You can't just trust that she'll tell you because, honesty, she's not even sure herself. Is all lost? Not really. You can see things (y) that correlate with her internal state (x) such as grinding teeth (y).
+
+Now, grinding teeth (y) doesn't necessarily mean she is angry. She may be scraping Cheetos off her molars. Our model needs to specify the probability of grinding teeth when she is angry and when she is not. This is called the emission probability and it is represented by a line from x to y.
+
+Let's say she was grinding her teeth for five minutes. We're pretty sure she is angry. The next moment she stops. Does that mean she is calm all of a sudden? Probably not. What about no teeth grinding for an hour? To take into account time, our model need something else. It needs to specify the probability that she will stay angry, calm down, get angry, or stay calm from one minute to the next. That is called the transition probability and it is represented by a line from one x node to the next.
+
+As you can see, this is a simple and potentially powerfully expressive model for dynamic systems such as tracking celestial objects (Kalman Filters are HMMs), speech recognition, and customer relationship management.
+
+I hope that was helpful! (I love my wife!)
+
+
+
+
+
+https://www.quora.com/What-is-a-simple-explanation-of-the-Hidden-Markov-Model-algorithm
