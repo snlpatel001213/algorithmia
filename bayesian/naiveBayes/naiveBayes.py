@@ -2,7 +2,7 @@ import math
 
 from utils import functionalTesting
 from utils import loadData
-
+# read - https://web.stanford.edu/~jurafsky/slp3/9.pdf
 # Dataset - https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)
 
 loadDataInstance = loadData()

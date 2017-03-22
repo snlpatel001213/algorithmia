@@ -3,6 +3,7 @@ from utils import splitToTrainTest
 from utils import functionalTesting
 import math
 # Dataset - https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)
+# read - https://web.stanford.edu/~jurafsky/slp3/9.pdf
 
 loadDataInstance  = loadData()
 functionalTestingInstance =  functionalTesting()
