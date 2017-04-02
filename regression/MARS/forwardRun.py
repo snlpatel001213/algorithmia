@@ -25,6 +25,44 @@ def findTrendline(xArray, yArray):
     b = yAvg - m * xAvg
     return m, b
 
+def loadFromcsv(fileName):
+    """
+    load a file and conver to 2d python list and return it
+    :param fileName: csv file name with absolute path
+
+    Example file  - pima-indians-diabetes.data
+    Test the script using following code
+    loadDataInstance =  loadData()
+    print loadDataInstance.loadFromcsv('pima-indians-diabetes.data')
+    e.g. https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data
+    :return: 2D arrat [list of [list]]
+    e.g. [['6', '148', '72', '35', '0', '33.6', '0.627', '50', '1'], ['1', '85', '66',...]..[]...]
+    """
+    try:
+        data = list(csv.reader(open(fileName)))
+        return data
+    except:
+        return (traceback.print_exc())
+
+
+def convertDataToFloat(dataset):
+    """
+    loadFromcsv function returns data as list of list of  strings,
+    It must be converted to floats for further processing
+    code can be tested through below given snippet
+
+    loadDataInstance = loadData()
+    dataset = loadDataInstance.loadFromcsv('pima-indians-diabetes.data')
+    print loadDataInstance.convertDataToFloat(dataset)
+
+    :param dataset:
+    :return: dataset in floats
+    """
+    for row in dataset:
+        for i in range(len(row)):
+            row[i] = float(row[i])
+    return dataset
+
 
 def findBreakPointsRaw(difference):
     """
@@ -81,7 +119,6 @@ def findBreakPointsAdvance(difference):
             # if i lower than i-1 and i+1 it will be defined as breakpoint
             # with additional condition the difference must be lesser than 50%
             # this will be a crest in local region \/
-
             lastPoint = i
             subFragments.append(interMediatePoints)
             interMediatePoints = []
@@ -90,7 +127,6 @@ def findBreakPointsAdvance(difference):
             # if i higher than i-1 and i+1 it will be defined as breakpoint
             # with additional condition the difference must be lesser than 150%
             # this will be a trough in local region /\
-
             lastPoint = i
             subFragments.append(interMediatePoints)
             interMediatePoints = []
@@ -101,150 +137,39 @@ def findBreakPointsAdvance(difference):
     return subFragments
 
 
-def loadFromcsv(fileName):
-    """
-    load a file and conver to 2d python list and return it
-    :param fileName: csv file name with absolute path
 
-    Example file  - pima-indians-diabetes.data
-    Test the script using following code
-    loadDataInstance =  loadData()
-    print loadDataInstance.loadFromcsv('pima-indians-diabetes.data')
-    e.g. https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data
-    :return: 2D arrat [list of [list]]
-    e.g. [['6', '148', '72', '35', '0', '33.6', '0.627', '50', '1'], ['1', '85', '66',...]..[]...]
-    """
-    try:
-        data = list(csv.reader(open(fileName)))
-        return data
-    except:
-        return (traceback.print_exc())
-
-
-def convertDataToFloat(dataset):
-    """
-    loadFromcsv function returns data as list of list of  strings,
-    It must be converted to floats for further processing
-    code can be tested through below given snippet
-
-    loadDataInstance = loadData()
-    dataset = loadDataInstance.loadFromcsv('pima-indians-diabetes.data')
-    print loadDataInstance.convertDataToFloat(dataset)
-
-    :param dataset:
-    :return: dataset in floats
-    """
-    for row in dataset:
-        for i in range(len(row)):
-            row[i] = float(row[i])
-    return dataset
 
 
 def fragmentCombiner(breakPoints, slopAndCoefficientArray):
     """
-    combine smaller fragments to bigger one
+        combine smaller fragments to bigger one
+
+    :param breakPoints: all breakpoints [[1,2,3],[4,5,6,7],...[..][..]]
+    :param slopAndCoefficientArray: slop and regression coefficient for all fragments
+    e.g.[[.06,6.4],[.76,3.4]] where .06 is the slop & 6.4 is the regression coefficient
     :return:
     """
-    newForwardArray = []
+    newForwardArray = [] # to store fragments after merger of one or many fragments
     for i in range(0, len(breakPoints) - 2, 2):
-        # print breakPoints[i]
 
-        # taking slop as well as coefficient for current fragment as well as next fragment in current fragment
-        slopAndCoefficientCurrent = slopAndCoefficientArray[i]
-        slopAndCoefficientNext = slopAndCoefficientArray[i + 1]
+        slopAndCoefficientCurrent = slopAndCoefficientArray[i] # coefficient of current fragment
+        slopAndCoefficientNext = slopAndCoefficientArray[i + 1] # coefficient of Next fragment
 
-        # slopAndCoefficientNext[1] - slop for next element,slopAndCoefficientCurrent[1] - slop for current element
-        # slopAndCoefficientNext[0] - coefficient for next element,slopAndCoefficientCurrent[0] - coefficient for current element
-        # percentageDiff is difference in percentage between two adjacent slops
-        # simply if slop and coefficient and range , combine two adjacent fragments
-
+        # percentage difference between coefficient of current and next fragment
         percentageDiff = slopAndCoefficientNext[1] * 100 / slopAndCoefficientCurrent[1]
-        if (percentageDiff < 20 or percentageDiff > -20) and (
-                            slopAndCoefficientCurrent[0] - slopAndCoefficientCurrent[1] < 15 or
-                            slopAndCoefficientCurrent[0] -
-                            slopAndCoefficientCurrent[1] > -15):
+
+        """
+        if percentage difference between coefficient is between 20 then combine.
+        """
+        if (percentageDiff < 20 or percentageDiff > -20) :
             temp1 = []
+            # if this condition is satisfied then two fragments will be merged in to one
             temp1.extend(breakPoints[i])
             temp1.extend(breakPoints[i + 1])
+            # new array with less number of fragments
             newForwardArray.append(temp1)
-            # print newForwardArray # you may print this if required
 
     return newForwardArray
-
-
-def withoutForwardRun():
-    """
-    This function only finds trendline and shows trendline for each fragment
-    this is without forward run, where many small fragment exists
-    :return:
-    """
-
-    # loading  data-set
-    # https://datamarket.com/data/set/22s2/annual-swedish-fertility-rates-1000s-1750-1849-thomas-1940#!ds=22s2&display=line
-    # Annual Swedish fertility rates (1000's) 1750-1849 Thomas (1940)
-
-    array = loadFromcsv("SwidishFertility")
-    # loded dataset in previous step is in string form, converting to float
-    array = convertDataToFloat(array)
-    xArray = []
-    yArray = []
-
-    # separating data in to X and Y
-    for eachXYPAir in array:
-        x = eachXYPAir[0]
-        y = eachXYPAir[1]
-        xArray.append(x)
-        yArray.append(y)
-    # getting trend line for the entire data
-    m, b = findTrendline(xArray, yArray)
-
-    difference = []  # will store difference between actual value of y and Ytrend (y derieved from trendline)
-    yArray = []
-
-    for eachXYPAir in array:
-        x = eachXYPAir[0]
-        y = eachXYPAir[1]
-        Ytrend = m * x + b  # finding derived value of Y called as Ytrend (y derieved from trendline) from so found m and b in previous code block
-        yArray.append(y)
-        difference.append(abs(y - Ytrend))
-        # print y , Ytrend , abs(y-Ytrend) # lets print and see how we will define breakpoints here
-        """
-        Breakpoints here are the point which separates group of data having similar slop, locally called fragments
-        """
-    # breakPoints = findBreakPointsRaw( difference) # define breakpoint using findBreakPointsRaw function
-    breakPoints = findBreakPointsAdvance(difference)  # define breakpoint using findBreakPointsAdvance function
-
-    # will print breakPoints
-    # below given block is for printing purpose only, You may comment this down if you don't need it
-    # print breakPoints
-    # for each in breakPoints:
-    #     for i in each:
-    #         print yArray[i]
-    #     print ""
-
-    # finding slop and regression coefficient for each Fragment between breakPoint
-    for eachFragment in breakPoints:
-        # print eachFragment,
-
-        # Getting x and y for the given Fragment range
-        xFragment = xArray[eachFragment[0] - 1:eachFragment[-1]]
-        yFragment = yArray[eachFragment[0] - 1:eachFragment[-1]]
-
-        # finding trendline for the given Fragment range
-        m, b = findTrendline(xFragment, yFragment)
-
-        # Getting x and y for the given Fragment range
-        xValueForFragment = [xArray[j - 1] for j in range(eachFragment[0], eachFragment[-1] + 1)]
-        yValueForFragment = [yArray[j - 1] for j in range(eachFragment[0], eachFragment[-1] + 1)]
-
-        # Getting yTrend for the given Fragment range
-        yDerived = [xArray[j - 1] * m + b for j in range(eachFragment[0], eachFragment[-1] + 1)]
-
-        # printing value of y and yTrend for printing
-        for i in range(0, len(xValueForFragment)):
-            print yValueForFragment[i], yDerived[i]
-        print ""
-
 
 def withForwardRun():
     """
@@ -308,8 +233,6 @@ def withForwardRun():
     breakPoints = fragmentCombiner(breakPoints, slopAndCoefficientArray)
     # print breakPoints
 
-
-    l = 0
     for eachFragment in breakPoints:
         # print eachFragment,
 
@@ -330,6 +253,6 @@ def withForwardRun():
         for i in range(0, len(xValueForFragment)):
             print yValueForFragment[i], yDerived[i]
         print ""
-        l = l + 1
 
-withoutForwardRun()
+
+withForwardRun()

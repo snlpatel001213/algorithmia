@@ -167,4 +167,4 @@ inputData = [[1, 42],
          [49, 66],
          [50, 67.5]]
 
-simpleMARS(array)
+simpleMARS(inputData)

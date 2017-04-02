@@ -13,7 +13,6 @@ def loadFromcsv( fileName):
     Test the script using following code
     loadDataInstance =  loadData()
     print loadDataInstance.loadFromcsv('pima-indians-diabetes.data')
-    e.g. https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data
     :return: 2D arrat [list of [list]]
     e.g. [['6', '148', '72', '35', '0', '33.6', '0.627', '50', '1'], ['1', '85', '66',...]..[]...]
     """
@@ -50,8 +49,8 @@ def findTrendline(xArray,yArray):
     :param XY:
     :return:
     """
-    print xArray
-    print yArray
+    print "xArray ;",xArray
+    print "yArray :",yArray
     xAvg = sum(xArray) / len(xArray)
     yAvg = sum(yArray) / len(yArray)
     upperPart = 0
@@ -64,79 +63,74 @@ def findTrendline(xArray,yArray):
     b = yAvg - m * xAvg
     return m, b
 
-def findBreakPoints(Yarray, difference):
+def findBreakPoints(yArray, difference):
     """
-    find breakpoints for allocation of different slop and b0 to each fragment
-    :param Yarray:
-    :param difference:
-    :return:
+    find breakpoints for allocation of different slop (m) and coefficient (b) to each fragment
+    :param difference: is the array which shows what is the difference between current point and the same point on trend-line
+    :return: subFragments, also referred as brekpoints
     """
-    subGraphPart = []
-    # print Yarray,difference
-    print len(difference)
+    subFragments = []
+    # print len(difference)
     lastPoint = 0
     interMediatePoints = []
-    for i in range(1, len(difference) - 1):
+    for i in range(1, len(difference) - 1): # iterating through array having difference between trend-line and actual points
         interMediatePoints.append(i)
         if difference[i - 1] > difference[i] < difference[i + 1]:
-            # interMediatePoints.append(i)
+            """if difference at given point i is lesser than its surrounding points : [i+1] and [i-1] ,  it will be defined as breakpoint
+            this will be a crest in local region \/ """
             lastPoint = i
-            subGraphPart.append(interMediatePoints)
+            subFragments.append(interMediatePoints)
             interMediatePoints = []
-            print "low Diffrernce point Identified", i + 1
+            # print "low Diffrernce point Identified", i + 1
         if difference[i - 1] < difference[i] > difference[i + 1]:
+            """if difference at given point i is higher than its surrounding points:  : [i+1] and [i-1],  it will be defined as breakpoint
+                this will be a crest in local region \/ """
             lastPoint = i
-            # interMediatePoints.append(i)
-            subGraphPart.append(interMediatePoints)
+            subFragments.append(interMediatePoints)
             interMediatePoints = []
-            print "High Diffrernce point Identified", i + 1
-    # processing last part
-    subGraphPart.append([j for j in range(lastPoint + 1, len(difference)+1)])
-    return subGraphPart
+            # print "High Difference point Identified", i + 1
+
+    # processing last fragment
+    subFragments.append([j for j in range(lastPoint + 1, len(difference) + 1)])
+    return subFragments
 
 
-array  = loadFromcsv("SwidishFertility")
-array  = convertDataToFloat(array)
-print array
+# loading file
+dataset  = loadFromcsv("SwidishFertility")
+# converting strings to float
+dataset  = convertDataToFloat(dataset)
+# print dataset
 xArray = []
 yArray = []
-for eachXYPAir in array:
+
+#seperating X and Y from the dataset
+for eachXYPAir in dataset:
     x = eachXYPAir[0]
     y = eachXYPAir[1]
     xArray.append(x)
     yArray.append(y)
+# finding  trendline   for entire data
 m, b = findTrendline(xArray,yArray)
 
 difference = []
 yArray = []
 
-for eachXYPAir in array:
+for eachXYPAir in dataset:
     x = eachXYPAir[0]
     y = eachXYPAir[1]
-    Ytrend = m * x + b
+    # finding Ypredicted, by using Y and Ypredicted
+    Ypredicted = m * x + b
     yArray.append(y)
-    difference.append(abs(y - Ytrend))
+    difference.append(abs(y - Ypredicted))
     # print y , Ytrend , abs(y-Ytrend)
+# finding breakpoints by using difference and Yactual(YArray)
 breakPoints = findBreakPoints(yArray, difference)
-print breakPoints
+
+# print breakPoints
+
+# printing out for plotting in microsoft excel
 for each in breakPoints:
     for i in each:
         print yArray[i]
-    print ""
-
-# finding slop and regression coefficient for each slop
-# for eachFragment in breakPoints:
-#     print eachFragment
-#     xFragment = xArray[eachFragment[0]:eachFragment[-1]]
-#     yFragment = yArray[eachFragment[0]:eachFragment[-1]]
-#     # print eachFragment[0],eachFragment[-1],findTrendline(xFragment,yFragment)
-#     #plottting
-#     m,b = findTrendline(xFragment, yFragment)
-#     xValueForFragment =  [xArray[j-1] for j in range(eachFragment[0], eachFragment[-1]+1)]
-#     yValueForFragment = [yArray[j - 1] for j in range(eachFragment[0], eachFragment[-1] + 1)]
-#     yDerived  = [xArray[j - 1]*m + b for j in range(eachFragment[0], eachFragment[-1] + 1)]
-#     # print xValueForFragment,yValueForFragment, yDerived
-#     for i in range (0,len(xValueForFragment)):
-#         print xValueForFragment[i],yValueForFragment[i], yDerived[i]
-#     print ""
+    print "" # will keep space between different fragments
 
