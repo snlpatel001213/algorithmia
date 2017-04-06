@@ -28,6 +28,7 @@ class minMaxNormalization:
                 """
                 going to each row for particular column
                 """
+                print row
                 columnvalues.append(row[columnNo])
             """
             e.g. columnvalues [12, 435, 43] at the end
@@ -104,6 +105,7 @@ class loadData:
         :return: dataset in floats
         """
         for row in dataset:
+            # print row
             for i in range(len(row)):
                 row[i] = float(row[i])
         return dataset
@@ -115,7 +117,7 @@ class loadData:
         :return: all required columns in 2d Array
         """
         """
-        Cheacking wheather or not required columns are within indexes of dataset
+        Cheacking whether or not required columns are within indexes of dataset
         """
         columnData = []
         for row in dataset: #surfing through all rows

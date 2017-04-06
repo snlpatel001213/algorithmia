@@ -95,7 +95,7 @@ class stepWiseRegressionModule:
 
         :param Xtrain: 2D array
         :param Ytrain: 2d Array
-        :param learningRate: float between
+        :param learningRate: float between 0 and 1
         :param numberOfEpoches: any integer
         :param maxPredictor: number of column to be selected for final run with highest correlation with predicate
         :return: Its prints , return Rsquarerror and coefficient value for selected column
