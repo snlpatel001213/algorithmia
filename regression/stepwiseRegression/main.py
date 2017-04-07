@@ -33,8 +33,6 @@ loadDataInstance = dataUtils.loadData()
 minMaxNormalizationInstance = dataUtils.minMaxNormalization()
 splitToTrainTestInstance = dataUtils.splitToTrainTest()
 stepWiseRegressionInstance  = stepWiseRegressionModule()
-functionalTestingInstance =  dataUtils.functionalTesting()
-
 
 # Running examples
 crudedata = loadDataInstance.loadFromcsv('housing.data') #putting data from csv to array
@@ -43,10 +41,6 @@ floatData = loadDataInstance.convertDataToFloat(crudedata)  # converting string 
 minMax = minMaxNormalizationInstance.minMaxCalculator(floatData) # calculating min max for each column
 normalizedData = minMaxNormalizationInstance.normalizeDatasetUsingMinmax(floatData,minMax)#appling min max normalization on entire dataset
 X,Y = splitToTrainTestInstance.getXandY(normalizedData)
-Xtrain, Xtest, Ytrain, Ytest = splitToTrainTestInstance.basicSplitter(X,Y) #splitting in to train and test data
+acceptedColsNo,coefficientValue =  stepWiseRegressionInstance.stepwise_Regression(X, Y, 0.01, 100,5) # training with logistic regression and stochastic gradient as a optimization function
 
-
-# print Ytrain
-coefficient =  stepWiseRegressionInstance.stepwise_Regression(Xtrain, Ytrain, 0.01, 100,5) # training with logistic regression and stochastic gradient as a optimization function
-# actual,predicted =stepWiseRegressionInstance.predictOnTest(Xtest,coefficient) # =testing on remining 30% of data
-# functionalTestingInstance.createConfusionMatrix(actual,predicted,0.30) # getting confusion matrix, accuracy and F1 score
+print "Selected Columns : ", acceptedColsNo

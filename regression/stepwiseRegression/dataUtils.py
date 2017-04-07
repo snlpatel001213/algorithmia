@@ -28,7 +28,7 @@ class minMaxNormalization:
                 """
                 going to each row for particular column
                 """
-                print row
+                # print row
                 columnvalues.append(row[columnNo])
             """
             e.g. columnvalues [12, 435, 43] at the end
@@ -166,36 +166,3 @@ class splitToTrainTest:
             y.append(row[-1])
         return x, y
 
-class functionalTesting():
-    """
-    for testing performance of classification
-    """
-    def createConfusionMatrix(self,actual, predicted, threshold):
-        """
-        will create confusion matrix for given set of actual and predicted array
-        :param actual: Array of Actual sample
-        :param predicted: Array of predicted sample
-        :param threshold:  Any number between 0-1
-        :return:
-        """
-        fp = 0
-        fn = 0
-        tp = 0
-        tn = 0
-        for i in range(len(predicted)):
-            if predicted[i] > threshold:
-                predicted[i] = 1
-            else:
-                predicted[i] = 0
-        for no in range(0, len(predicted)):
-            if predicted[no] == 1 and actual[no] == 1:
-                tp += 1
-            elif predicted[no] == 0 and actual[no] == 0:
-                tn += 1
-            elif predicted[no] == 1 and actual[no] == 0:
-                fn += 1
-            elif predicted[no] == 0 and actual[no] == 1:
-                fp += 1
-        ACC = float((tp + tn))/ float((fp + tp + tn + fn))
-        F1 = float(2*tp)/ float(2*tp + fp + fn)
-        print "False Positive : ",fp,", False Negative : ", fn,", True Positive : ", tp,", True Negative : ", tn,", Accuracy : ",ACC ,", F1 Score : ",F1
