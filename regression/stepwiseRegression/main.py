@@ -21,9 +21,6 @@ obtained from  https://archive.ics.uci.edu/ml/machine-learning-databases/housing
     14. MEDV     Median value of owner-occupied homes in $1000's
 """
 
-
-
-
 # importing all functionality
 from stepWiseRegression import stepWiseRegressionModule
 
