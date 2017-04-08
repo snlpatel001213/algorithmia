@@ -9,7 +9,6 @@ class logisticRegression:
         :param coefficients: [0.155,-0.2555,0.5456] Random initialization
         :return: Ypredicted
 
-        This function will return coefficient as it is real thing we get after training
         coefficient  can be actually compared with memory from learning and be applied for further predictions
 
         """
