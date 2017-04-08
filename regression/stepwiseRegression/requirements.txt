@@ -1,0 +1,10 @@
+adium-theme-ubuntu==0.3.4
+elasticsearch==5.3.0
+LinkChecker==9.3
+pycurl==7.43.0
+pyenchant==1.6.8
+pygobject==3.20.0
+python-apt==1.1.0b1
+requests==2.13.0
+unity-lens-photos==1.0
+urllib3==1.20
