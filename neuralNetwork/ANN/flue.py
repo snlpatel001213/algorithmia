@@ -1,4 +1,4 @@
-__author__ = 'Decepticonn'
+__author__ = 'sUNIL pATEL'
 import random
 import math
 import numpy
@@ -69,7 +69,7 @@ PP=0
 QQ=0
 RR=0
 
-with open('data.txt','r') as f:
+with open('xor.txt','r') as f:
 
     for line in f:
         errorsq=0
