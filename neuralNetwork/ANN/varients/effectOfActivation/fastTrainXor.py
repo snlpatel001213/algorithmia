@@ -1,3 +1,8 @@
+"""
+This code is variant of Artificial Neural Network with Hyperbolic tangent as Activation function.
+"""
+
+
 import math
 """
 defining XOR gate, [x1, x2 , y]
@@ -23,6 +28,8 @@ error = 0
 # defining epochs
 Epochs = 2000
 count = 0
+a = 1.716
+b = 1.667
 # run this repeatedly for number of Epochs
 for j in range(Epochs):
     print"squaredError", squaredError
@@ -32,9 +39,9 @@ for j in range(Epochs):
         """
         calculating output at each perceptron
         """
-        y3 = 1 / (1 + math.exp(-((XOR[i][0] * w13) + (XOR[i][1] * w23))))
-        y4 = 1 / (1 + math.exp(-(XOR[i][0] * w14 + XOR[i][1] * w24)))
-        y5 = 1 / (1 + math.exp(-(y3 * w35 + y4 * w45)))
+        y3 = (2*a / (1 + math.exp(-b*((XOR[i][0] * w13) + (XOR[i][1] * w23)))))-a
+        y4 = (2*a / (1 + math.exp(-b*(XOR[i][0] * w14 + XOR[i][1] * w24))))-a
+        y5 = (2*a / (1 + math.exp(-b*(y3 * w35 + y4 * w45))))-a
         """
         calculating error
         """
@@ -84,7 +91,7 @@ for j in range(Epochs):
         """
         uncomment below line to see predicted and actual output
         """
-        # print ("Predicted",class_," actual ",XOR[i][2])
+        # print (y5,"Predicted",class_," actual ",XOR[i][2])
         """
         calculating squared error
         """

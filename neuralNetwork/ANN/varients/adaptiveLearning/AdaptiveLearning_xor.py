@@ -24,11 +24,66 @@ error = 0
 Epochs = 2000
 count = 0
 # run this repeatedly for number of Epochs
+global slopArray
+slopArray = []
+def findTrendline(xArray, yArray):
+    """
+    used to find trend-line
+    :param xArray:  Array with all elements in X
+    :param yArray: Array with all elements in Y
+    :return:
+    """
+    # print xArray
+    # print yArray
+    xAvg = sum(xArray) / len(xArray)
+    yAvg = sum(yArray) / len(yArray)
+    upperPart = 0
+    lowerPart = 0
+    m = 0
+    # implementing mathematics behind trendline
+    for i in range(0, len(xArray)):
+        upperPart += (xArray[i] - xAvg) * (yArray[i] - yAvg)
+        lowerPart += math.pow(xArray[i] - xAvg, 2)
+        m = upperPart / lowerPart
+    b = yAvg - m * xAvg
+    return m, b
+
+def changeAdaptively(squaredErrorArray,EpochArray,alpha):
+    """
+
+    :param squaredErrorArray:
+    :param EpochArray:
+    :return:
+    """
+    # print "went ti this func"
+    # print squaredErrorArray[-10:],EpochArray[-10:]
+    m,b = findTrendline(squaredErrorArray[-10:],EpochArray[-10:])
+    try:
+        if m > slopArray[-1]:
+                slopArray.append(m)
+                alpha =  alpha*1.08
+        else:
+                slopArray.append(m)
+                alpha = alpha / 1.04
+        return alpha
+    except:
+        slopArray.append(m)
+        return alpha
+
+EpochArray = []
+squaredErrorArray = []
 for j in range(Epochs):
-    print"squaredError", squaredError
     # initializing squaredError per epoch
+    print"squaredError", squaredError, alpha
+
+    if j%10 == 0 and j!=0:
+        # print j
+        alpha = changeAdaptively(squaredErrorArray,EpochArray,alpha)
+    squaredErrorArray.append(squaredError)
+    EpochArray.append(j)
     squaredError = 0
     for i in range(4): # iterating through each case for given iteration
+
         """
         calculating output at each perceptron
         """
@@ -84,7 +139,7 @@ for j in range(Epochs):
         """
         uncomment below line to see predicted and actual output
         """
-        # print ("Predicted",class_," actual ",XOR[i][2])
+        print ("Predicted",class_," actual ",XOR[i][2])
         """
         calculating squared error
         """
