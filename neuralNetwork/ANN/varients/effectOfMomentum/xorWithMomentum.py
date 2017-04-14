@@ -23,7 +23,7 @@ error = 0
 # defining epochs
 Epochs = 2000
 count = 0
-beta = 2
+beta = 1.001
 # run this repeatedly for number of Epochs
 for j in range(Epochs):
     print"squaredError", squaredError
@@ -33,9 +33,9 @@ for j in range(Epochs):
         """
         calculating output at each perceptron
         """
-        y3 = 1 / (1 + math.exp(-((XOR[i][0] * w13) + (XOR[i][1] * w23))))
-        y4 = 1 / (1 + math.exp(-(XOR[i][0] * w14 + XOR[i][1] * w24)))
-        y5 = 1 / (1 + math.exp(-(y3 * w35 + y4 * w45)))
+        y3 = 1 / (1 + math.exp(-((XOR[i][0] * w13) + (XOR[i][1] * w23-t3))))
+        y4 = 1 / (1 + math.exp(-(XOR[i][0] * w14 + XOR[i][1] * w24-t4)))
+        y5 = 1 / (1 + math.exp(-(y3 * w35 + y4 * w45-t5)))
         """
         calculating error
         """
@@ -64,15 +64,15 @@ for j in range(Epochs):
         """
         calculating weight and bias update
         """
-        w13 =  w13 +beta * dw13
-        w14 = w14 + beta *dw14
-        w23 =  w23 + beta *dw23
-        w24 =  w24 +beta * dw24
-        w35 = w35 +beta * dw35
-        w45 =  w45 +beta * dw45
-        t3 =  t3 + beta *dt3
-        t4 =  t4 + beta *dt4
-        t5 = t5 + beta *dt5
+        w13 =  (beta * w13) +  dw13
+        w14 = (beta * w14) + dw14
+        w23 =  (beta *w23) + dw23
+        w24 =  (beta *w24) + dw24
+        w35 = (beta *w35) + dw35
+        w45 =  (beta *w45) + dw45
+        t3 =  (beta *t3) + dt3
+        t4 =  (beta *t4) + dt4
+        t5 = (beta * t5) + dt5
 
         """
         Since y5 will be in float number between (0 - 1)

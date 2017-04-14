@@ -23,6 +23,7 @@ error = 0
 # defining epochs
 Epochs = 2000
 count = 0
+
 # run this repeatedly for number of Epochs
 for j in range(Epochs):
     print"squaredError", squaredError
@@ -32,9 +33,9 @@ for j in range(Epochs):
         """
         calculating output at each perceptron
         """
-        y3 = 1 / (1 + math.exp(-((XOR[i][0] * w13) + (XOR[i][1] * w23))))
-        y4 = 1 / (1 + math.exp(-(XOR[i][0] * w14 + XOR[i][1] * w24)))
-        y5 = 1 / (1 + math.exp(-(y3 * w35 + y4 * w45)))
+        y3 = 1 / (1 + math.exp(-((XOR[i][0] * w13) + (XOR[i][1] * w23-t3))))
+        y4 = 1 / (1 + math.exp(-(XOR[i][0] * w14 + XOR[i][1] * w24-t4)))
+        y5 = 1 / (1 + math.exp(-(y3 * w35 + y4 * w45-t5)))
         """
         calculating error
         """

@@ -1,4 +1,5 @@
 import math
+
 """
 defining XOR gate, [x1, x2 , y]
 """
@@ -26,6 +27,8 @@ count = 0
 # run this repeatedly for number of Epochs
 global slopArray
 slopArray = []
+
+
 def findTrendline(xArray, yArray):
     """
     used to find trend-line
@@ -48,48 +51,63 @@ def findTrendline(xArray, yArray):
     b = yAvg - m * xAvg
     return m, b
 
-def changeAdaptively(squaredErrorArray,EpochArray,alpha):
-    """
 
+def changeAdaptively(squaredErrorArray, EpochArray, alpha):
+    """
+    to change learning rate(alpha) adaptively
     :param squaredErrorArray:
     :param EpochArray:
     :return:
     """
     # print "went ti this func"
     # print squaredErrorArray[-10:],EpochArray[-10:]
-    m,b = findTrendline(squaredErrorArray[-10:],EpochArray[-10:])
+    m, b = findTrendline(squaredErrorArray[-10:], EpochArray[-10:])
     try:
         if m > slopArray[-1]:
-                slopArray.append(m)
-                alpha =  alpha*1.08
+            """
+                If present slop is less than previous one, it indicates decrease in error gradually
+                then increase learning rate further to decelerate error further
+
+            """
+            slopArray.append(m)
+            alpha = alpha * 1.08
         else:
-                slopArray.append(m)
-                alpha = alpha / 1.04
+            """
+            If present slop is more than previous, it indicates instability or increase in error
+            then decrease learning rate
+            """
+            slopArray.append(m)
+            alpha = alpha / 1.04
         return alpha
     except:
+        # for first iteration when nothing will be there in slopArray
+        # so slop will throw exception and will be handled by except block
         slopArray.append(m)
         return alpha
+
 
 EpochArray = []
 squaredErrorArray = []
 for j in range(Epochs):
-    # initializing squaredError per epoch
+    # printing squaredError, alpha after each epoch
     print"squaredError", squaredError, alpha
 
-    if j%10 == 0 and j!=0:
-        # print j
-        alpha = changeAdaptively(squaredErrorArray,EpochArray,alpha)
+    # making update to learning rate after every 10 epochs
+    if j % 10 == 0 and j != 0:
+        alpha = changeAdaptively(squaredErrorArray, EpochArray, alpha)
+    # appending squared error to squaredErrorArray
     squaredErrorArray.append(squaredError)
+    # appending number of completed epochs to EpochArray
     EpochArray.append(j)
     squaredError = 0
-    for i in range(4): # iterating through each case for given iteration
+    for i in range(4):  # iterating through each case for given iteration
 
         """
         calculating output at each perceptron
         """
-        y3 = 1 / (1 + math.exp(-((XOR[i][0] * w13) + (XOR[i][1] * w23))))
-        y4 = 1 / (1 + math.exp(-(XOR[i][0] * w14 + XOR[i][1] * w24)))
-        y5 = 1 / (1 + math.exp(-(y3 * w35 + y4 * w45)))
+        y3 = 1 / (1 + math.exp(-((XOR[i][0] * w13) + (XOR[i][1] * w23 - t3))))
+        y4 = 1 / (1 + math.exp(-(XOR[i][0] * w14 + XOR[i][1] * w24 - t4)))
+        y5 = 1 / (1 + math.exp(-(y3 * w35 + y4 * w45 - t5)))
         """
         calculating error
         """
@@ -139,7 +157,7 @@ for j in range(Epochs):
         """
         uncomment below line to see predicted and actual output
         """
-        print ("Predicted",class_," actual ",XOR[i][2])
+        # print ("Predicted",class_," actual ",XOR[i][2])
         """
         calculating squared error
         """
