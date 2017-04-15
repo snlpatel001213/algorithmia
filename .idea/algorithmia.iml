@@ -5,7 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/WebsiteWork" />
       <excludeFolder url="file://$MODULE_DIR$/ml-latest" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 2.7.11 (~/anaconda2/bin/python)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 2.7.11 (~/anaconda2/bin/python2.7)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">
