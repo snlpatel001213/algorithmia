@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<title>
+DNN
+</title>
+<style type="text/css">
+/* Line styles */
+
+.wu-line, .wu-line > span {
+	line-height : 160%;
+}
+
+.wu-line.wu-right {
+	text-align : right;
+}
+
+.wu-line.wu-center {
+	text-align : center;
+}
+
+.wu-line.wu-justify {
+	text-align : justify;
+}
+
+/* Line spacing */
+
+.wu-line_spacing_05, .wu-line_spacing_05 > span {
+	line-height : 50%;
+}
+
+.wu-line_spacing_06, .wu-line_spacing_06 > span {
+	line-height : 60%;
+}
+
+.wu-line_spacing_07, .wu-line_spacing_07 > span {
+	line-height : 70%;
+}
+
+.wu-line_spacing_08, .wu-line_spacing_08 > span {
+	line-height : 80%;
+}
+
+.wu-line_spacing_09, .wu-line_spacing_09 > span {
+	line-height : 90%;
+}
+
+.wu-line_spacing_10, .wu-line_spacing_10 > span {
+	line-height : 100%;
+}
+
+.wu-line_spacing_11, .wu-line_spacing_11 > span {
+	line-height : 110%;
+}
+
+.wu-line_spacing_12, .wu-line_spacing_12 > span {
+	line-height : 120%;
+}
+
+.wu-line_spacing_13, .wu-line_spacing_13 > span {
+	line-height : 130%;
+}
+
+.wu-line_spacing_14, .wu-line_spacing_14 > span {
+	line-height : 140%;
+}
+
+.wu-line_spacing_15, .wu-line_spacing_15 > span {
+	line-height : 150%;
+}
+
+.wu-line_spacing_16, .wu-line_spacing_16 > span {
+	line-height : 160%;
+}
+
+.wu-line_spacing_17, .wu-line_spacing_17 > span {
+	line-height : 170%;
+}
+
+.wu-line_spacing_18, .wu-line_spacing_18 > span {
+	line-height : 180%;
+}
+
+.wu-line_spacing_19, .wu-line_spacing_19 > span {
+	line-height : 190%;
+}
+
+.wu-line_spacing_20, .wu-line_spacing_20 > span {
+	line-height : 200%;
+}
+
+/* Lists */
+
+.wu-disc, .wu-square {
+	display : list-item;
+	list-style : inside;
+}
+
+.wu-lower-alpha, .wu-lower-roman , .wu-lower-roman, .wu-upper-alpha, .wu-upper-roman {
+	display : block;
+}
+
+.wu-disc {
+	list-style-type : disc;
+}
+
+.wu-lower-alpha:before {
+	counter-increment : item;
+	content : counter(item, lower-alpha) ". "
+}
+
+.wu-lower-roman:before {
+	counter-increment : item;
+	content : counter(item, lower-roman) ". "
+}
+
+.wu-square {
+	list-style-type : square;
+}
+
+.wu-upper-alpha:before {
+	counter-increment : item;
+	content : counter(item, upper-alpha) ". "
+}
+
+.wu-upper-roman:before {
+	counter-increment : item;
+	content : counter(item, upper-roman) ". "
+}
+
+.wu-ordered {
+	display : block;
+}
+
+.wu-ordered:before {
+	counter-increment : item;
+	content : counter(item) ". "
+}
+
+.wu-reset-counter {
+	counter-reset : item;
+}
+
+/* Heading */
+
+.wu-line.wu-heading1, .wu-line.wu-heading1 span {
+	display: block;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 135%;
+}
+
+.wu-line.wu-heading2, .wu-line.wu-heading2 span {
+	display: block;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 130%;
+}
+
+.wu-line.wu-heading3, .wu-line.wu-heading3 span {
+	display: block;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 125%;
+}
+
+.wu-line.wu-heading4, .wu-line.wu-heading4 span {
+	display: block;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 120%;
+}
+
+.wu-line.wu-heading5, .wu-line.wu-heading5 span {
+	display: block;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 115%;
+}
+
+.wu-line.wu-heading6, .wu-line.wu-heading6 span {
+	display: block;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 110%;
+}
+
+.wu-line.wu-heading1 span, .wu-line.wu-heading2 span, .wu-line.wu-heading3 span, .wu-line.wu-heading4 span, .wu-line.wu-heading5 span, .wu-line.wu-heading6 span {
+	display : inline-block;
+}
+
+/* Text styles */
+
+.wu-text.wu-bold {
+	font-weight : bold;
+}
+
+.wu-text.wu-underline {
+	text-decoration : underline;
+}
+
+.wu-text.wu-italic {
+	font-style : italic;
+}
+
+.wu-text.wu-strikethrough {
+	text-decoration : line-through;
+}
+
+body {
+	margin : 0;
+}
+
+div.editor {
+	white-space : pre-wrap;
+	word-wrap : break-word;
+	font-size : 16px;
+	font-family : Arial;
+	line-height : 120%;
+	line-height : 160%;
+	padding : 30px 50px;
+}
+
+div.editor span {
+	font-size : 16px;
+	font-family : Arial;
+}
+
+
+</style>
+</head>
+<body>
+<div class="nbe editor">
+<div class="wu-root"><div class="wu-line"><span class="wu-text">Increse in Number of</span><span class="wu-text"> </span><span class="wu-text">Hidden layers leads to two issues: 
+</span><br></div><div class="wu-line"><span class="wu-text wu-bold">Vanishing </span><span class="wu-text wu-bold">gradients:</span><span class="wu-text">  as more errors are added backpropagations fails to</span><span class="wu-text"> </span><span class="wu-text">communicate errors from output layer to input layer. As we have seen</span><span class="wu-text"> </span><span class="wu-text">in the Artifiail neural network implentation that we calculate error</span><span class="wu-text"> </span><span class="wu-text">gradient at each perceptron, this error gradient vanishes as we back</span><span class="wu-text"> </span><span class="wu-text">propagate. As error gradient vanihes we no more</span><span class="wu-text"> effective</span><span class="wu-text"> gardients</span><span class="wu-text">, updates </span><span class="wu-text">to weights</span><span class="wu-text"> cannot be</span><span class="wu-text"> made and </span><span class="wu-text">inturn lea</span><span class="wu-text">rning </span><span class="wu-text">canno</span><span class="wu-text">t takes pl</span><span class="wu-text">ce with mo</span><span class="wu-text">re layers.</span><span class="wu-text">
+</span><br></div><div class="wu-line"><span class="wu-text wu-bold">Overfitting:</span><br></div><div class="wu-line"><span class="wu-text">smaller da</span><span class="wu-text">ta is repa</span><span class="wu-text">tedly expo</span><span class="wu-text">sed to</span><span class="wu-text"> </span><span class="wu-text">a ne</span><span class="wu-text">twork, a m</span><span class="wu-text">a</span><span class="wu-text">chine star</span><span class="wu-text">t overfitt</span><span class="wu-text">ing to it.</span><span class="wu-text"> It means,</span><span class="wu-text"> on the sa</span><span class="wu-text">me data ma</span><span class="wu-text">chine perf</span><span class="wu-text">ormes bett</span><span class="wu-text">er but per</span><span class="wu-text">form poor </span><span class="wu-text">on new dat</span><span class="wu-text">a. It can </span><span class="wu-text">be comapre</span><span class="wu-text">d with cra</span><span class="wu-text">mming the </span><span class="wu-text">task by ma</span><span class="wu-text">chine and </span><span class="wu-text">do not gen</span><span class="wu-text">eralized w</span><span class="wu-text">ell to the</span><span class="wu-text"> newer cas</span><span class="wu-text">es.</span><br></div><div class="wu-line"><span class="wu-text">With inven</span><span class="wu-text">t of new a</span><span class="wu-text">lgorith</span><span class="wu-text">m</span><span class="wu-text"> li</span><span class="wu-text">ke </span><span class="wu-text">"</span><span class="wu-text">Dropout</span><span class="wu-text">", this pr</span><span class="wu-text">oblem got </span><span class="wu-text">solved to </span><span class="wu-text">much large</span><span class="wu-text">r extend.</span><br></div><div class="wu-line"><br></div><div class="wu-line"><br></div><div class="wu-line wu-heading3"><span class="wu-text" style="font-size: 1.2em;">Hardware issues</span><br></div><div class="wu-line" style="font-size: 1.2em;"><span class="wu-text" style="font-size: 14px;">Artificila</span><span class="wu-text" style="font-size: 14px;"> </span><span class="wu-text" style="font-size: 14px;">neural net</span><span class="wu-text" style="font-size: 14px;">work are c</span><span class="wu-text" style="font-size: 14px;">ostlier in</span><span class="wu-text" style="font-size: 14px;"> them of c</span><span class="wu-text" style="font-size: 14px;">omputation</span><span class="wu-text" style="font-size: 14px;">al require</span><span class="wu-text" style="font-size: 14px;">ment. I wi</span><span class="wu-text" style="font-size: 14px;">ll give yo</span><span class="wu-text" style="font-size: 14px;">u one prac</span><span class="wu-text" style="font-size: 14px;">tical exam</span><span class="wu-text" style="font-size: 14px;">ple : </span><br></div><div class="wu-line"><span class="wu-text" style="font-size: 14px;">I am was w</span><span class="wu-text" style="font-size: 14px;">orking wit</span><span class="wu-text" style="font-size: 14px;">h below gi</span><span class="wu-text" style="font-size: 14px;">ven Convol</span><span class="wu-text" style="font-size: 14px;">ution netw</span><span class="wu-text" style="font-size: 14px;">ork which </span><span class="wu-text" style="font-size: 14px;">is a part </span><span class="wu-text" style="font-size: 14px;">of VGG16 n</span><span class="wu-text" style="font-size: 14px;">etwork. VG</span><span class="wu-text" style="font-size: 14px;">G16 isa hu</span><span class="wu-text" style="font-size: 14px;">ge network</span><span class="wu-text" style="font-size: 14px;"> with  20+</span><span class="wu-text" style="font-size: 14px;"> stacked l</span><span class="wu-text" style="font-size: 14px;">ayers and </span><span class="wu-text" style="font-size: 14px;">the full n</span><span class="wu-text" style="font-size: 14px;">etwork is </span><span class="wu-text" style="font-size: 14px;">having 15 </span><span class="wu-text" style="font-size: 14px;">lack param</span><span class="wu-text" style="font-size: 14px;">eters. </span><br></div><div class="wu-line"><img class="wu-img" src="https://www.cs.toronto.edu/~frossard/post/vgg16/vgg16.png" width="470" height="276" title=""><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line" style="font-size: 14px;"><span class="wu-text">model = Sequential()</span><br></div><div class="wu-line"><span class="wu-text">model.add(ZeroPadding2D((1,1),input_shape=(3,256,256)))</span><br></div><div class="wu-line"><span class="wu-text">model.add(Convolution2D(64, 3, 3, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text">model.add(ZeroPadding2D((1,1)))</span><br></div><div class="wu-line"><span class="wu-text">model.add(Convolution2D(64, 3, 3, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text">model.add(MaxPooling2D((2,2)))</span><br></div><div class="wu-line"><span class="wu-text">model.add(ZeroPadding2D((1,1)))</span><br></div><div class="wu-line"><span class="wu-text">model.add(Convolution2D(128, 3, 3, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text">model.add(ZeroPadding2D((1,1)))</span><br></div><div class="wu-line"><span class="wu-text">model.add(Convolution2D(128, 3, 3, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text">model.add(MaxPooling2D((2,2)))</span><br></div><div class="wu-line"><span class="wu-text">model.add(ZeroPadding2D((1,1)))</span><br></div><div class="wu-line"><span class="wu-text">model.add(Convolution2D(256, 3, 3, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text">model.add(ZeroPadding2D((1,1)))</span><br></div><div class="wu-line"><span class="wu-text">model.add(Convolution2D(256, 3, 3, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text">model.add(ZeroPadding2D((1,1)))</span><br></div><div class="wu-line"><span class="wu-text">model.add(Convolution2D(256, 3, 3, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text">model.add(MaxPooling2D((2,2)))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(ZeroPadding2D((1,1)))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(Convolution2D(512, 3, 3, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(ZeroPadding2D((1,1)))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(Convolution2D(512, 3, 3, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(ZeroPadding2D((1,1)))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(Convolution2D(512, 3, 3, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(MaxPooling2D((2,2)))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(ZeroPadding2D((1,1)))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(Convolution2D(512, 3, 3, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(ZeroPadding2D((1,1)))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(Convolution2D(512, 3, 3, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(ZeroPadding2D((1,1)))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(Convolution2D(512, 3, 3, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text"># model.add(MaxPooling2D((2,2)))</span><br></div><div class="wu-line"><span class="wu-text">model.add(Flatten())</span><br></div><div class="wu-line"><span class="wu-text">model.add(Dense(128, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text">model.add(Dropout(0.5))</span><br></div><div class="wu-line"><span class="wu-text">model.add(Dense(64, activation='relu'))</span><br></div><div class="wu-line"><span class="wu-text">model.add(Dropout(0.5))</span><br></div><div class="wu-line"><span class="wu-text">model.add(Dense(2, activation='softmax'))</span><br></div><div class="wu-line"><span class="wu-text"># model.summary()</span><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line"><span class="wu-text" style="font-size: 14px;">This netwo</span><span class="wu-text" style="font-size: 14px;">rk with so</span><span class="wu-text" style="font-size: 14px;">me set of </span><span class="wu-text" style="font-size: 14px;">image</span><span class="wu-text" style="font-size: 14px;">s, it</span><span class="wu-text" style="font-size: 14px;"> takes 240</span><span class="wu-text" style="font-size: 14px;"> seconds/e</span><span class="wu-text" style="font-size: 14px;">pochs</span><span class="wu-text" style="font-size: 14px;"> o</span><span class="wu-text" style="font-size: 14px;">n GPU with</span><span class="wu-text" style="font-size: 14px;"> 3000 core</span><span class="wu-text" style="font-size: 14px;"> and the s</span><span class="wu-text" style="font-size: 14px;">ame networ</span><span class="wu-text" style="font-size: 14px;">k with sam</span><span class="wu-text" style="font-size: 14px;">e data tak</span><span class="wu-text" style="font-size: 14px;">es 17100</span><span class="wu-text" style="font-size: 14px;"> </span><span class="wu-text" style="font-size: 14px;">se</span><span class="wu-text" style="font-size: 14px;">conds/Epo</span><span class="wu-text" style="font-size: 14px;">ch on CPU.</span><span class="wu-text" style="font-size: 14px;"> For the s</span><span class="wu-text" style="font-size: 14px;">ame algori</span><span class="wu-text" style="font-size: 14px;">thm </span><span class="wu-text" style="font-size: 14px;">CPU</span><span class="wu-text" style="font-size: 14px;"> ta</span><span class="wu-text" style="font-size: 14px;">kes 70 tim</span><span class="wu-text" style="font-size: 14px;">es more t</span><span class="wu-text" style="font-size: 14px;">ime compar</span><span class="wu-text" style="font-size: 14px;">ed to GPU.</span><span class="wu-text" style="font-size: 14px;"> </span><br></div><div class="wu-line" style="font-size: 14px;"><span class="wu-text" style="font-size: 14px;">GPU are re</span><span class="wu-text" style="font-size: 14px;">cent devel</span><span class="wu-text" style="font-size: 14px;">opement, i</span><span class="wu-text" style="font-size: 14px;">nspite of </span><span class="wu-text" style="font-size: 14px;">having dat</span><span class="wu-text" style="font-size: 14px;">a </span><span class="wu-text" style="font-size: 14px;">and </span><span class="wu-text" style="font-size: 14px;">algorith</span><span class="wu-text" style="font-size: 14px;">m in place</span><span class="wu-text" style="font-size: 14px;">, we cold </span><span class="wu-text" style="font-size: 14px;">not apply </span><span class="wu-text" style="font-size: 14px;">machine le</span><span class="wu-text" style="font-size: 14px;">arning to </span><span class="wu-text" style="font-size: 14px;">it due to </span><span class="wu-text" style="font-size: 14px;">Hardware c</span><span class="wu-text" style="font-size: 14px;">onstrains.</span><br></div><div class="wu-line"><img class="wu-img" src="https://ourworldindata.org/wp-content/uploads/2013/05/Computations-per-Kilowatt-Hour-over-Time-Koomey-Berard-Sanchez-and-Wong-2011.png" title=""><br></div><div class="wu-line" style="font-size: 14px;"><span class="wu-text" style="font-size: 14px;"> </span><span class="wu-text" style="font-size: 14px;"> </span><br></div><div class="wu-line"><span class="wu-text" style="font-size: 14px;">Above figu</span><span class="wu-text" style="font-size: 14px;">re cle</span><span class="wu-text" style="font-size: 14px;">a</span><span class="wu-text" style="font-size: 14px;">rly </span><span class="wu-text" style="font-size: 14px;">depicts th</span><span class="wu-text" style="font-size: 14px;">at  recent</span><span class="wu-text" style="font-size: 14px;">ly</span><span class="wu-text" style="font-size: 14px;"> co</span><span class="wu-text" style="font-size: 14px;">mputationa</span><span class="wu-text" style="font-size: 14px;">l power </span><span class="wu-text" style="font-size: 14px;">has</span><span class="wu-text" style="font-size: 14px;"> </span><span class="wu-text" style="font-size: 14px;"> in</span><span class="wu-text" style="font-size: 14px;">creas</span><span class="wu-text" style="font-size: 14px;">ed</span><span class="wu-text" style="font-size: 14px;"> ex</span><span class="wu-text" style="font-size: 14px;">ponentiall</span><span class="wu-text" style="font-size: 14px;">y. Now</span><span class="wu-text" style="font-size: 14px;">days</span><span class="wu-text" style="font-size: 14px;"> han</span><span class="wu-text" style="font-size: 14px;">d held de</span><span class="wu-text" style="font-size: 14px;">vices  lik</span><span class="wu-text" style="font-size: 14px;">e Laptops </span><span class="wu-text" style="font-size: 14px;">are also e</span><span class="wu-text" style="font-size: 14px;">quiped wit</span><span class="wu-text" style="font-size: 14px;">h enough p</span><span class="wu-text" style="font-size: 14px;">ower that </span><span class="wu-text" style="font-size: 14px;">one </span><span class="wu-text" style="font-size: 14px;">can apply </span><span class="wu-text" style="font-size: 14px;">machine le</span><span class="wu-text" style="font-size: 14px;">arning </span><span class="wu-text" style="font-size: 14px;">on mediu</span><span class="wu-text" style="font-size: 14px;">m size dat</span><span class="wu-text" style="font-size: 14px;">aset.</span><span class="wu-text" style="font-size: 14px;"> </span><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line"><span class="wu-text" style="font-size: 14px;">Insurgence</span><span class="wu-text" style="font-size: 14px;"> of neural</span><span class="wu-text" style="font-size: 14px;"> network</span><span class="wu-text" style="font-size: 14px;"> in tweent</span><span class="wu-text" style="font-size: 14px;">y first ce</span><span class="wu-text" style="font-size: 14px;">ntury </span><span class="wu-text" style="font-size: 14px;"> i</span><span class="wu-text" style="font-size: 14px;">s due to e</span><span class="wu-text" style="font-size: 14px;">fficient G</span><span class="wu-text" style="font-size: 14px;">PGPU and G</span><span class="wu-text" style="font-size: 14px;">PU computi</span><span class="wu-text" style="font-size: 14px;">ng.</span><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line"><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">In 2006, a publication by&nbsp;</span><a class="wu-link" href="https://en.wikipedia.org/wiki/Geoffrey_Hinton"><span class="wu-text">Geoffrey Hinton</span></a><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">&nbsp;</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">and Ruslan Salakhutdinov</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;"> successfu</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">lly traine</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">d a multil</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ayered net</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">work with </span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">superior p</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">erformance</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;"> on MNIST </span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">dataset, l</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">eds to </span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">beginning</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;"> of </span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">deep learn</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ing era.</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">Simply</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;"> D</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">eep learni</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ng is</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;"> a</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;"> modi</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">fied versi</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">on of  ANN</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">. </span><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line"><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">As shown i</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">n figure i</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">n ANN we n</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">etwork wit</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">h few laye</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">rs and tra</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">in it with</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;"> forward p</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ass and ba</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ck propaga</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">tion. In d</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">eep learni</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ng this ta</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">sk is perf</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ormed in l</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ittle diff</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">erent way.</span><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line"><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">As shown i</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">n figure, </span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">deep learn</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ing is hav</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ing two di</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">fferent st</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">eps in lea</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">rning. 1) </span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">layer wise</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;"> training </span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">and 2) fin</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">e tuning</span><br></div><div class="wu-line"><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">A shown in</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;"> figure, i</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">n  layer w</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ise traini</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ng each la</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">yer is spe</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">rately tra</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ined. [De</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">scribe ;ly</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">er wise tr</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ainign her</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;"> </span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">]</span><br></div><div class="wu-line"><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">Describe f</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">ine tuning</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;"> here</span><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line"><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">Advance op</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">timization</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;"> technique</span><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">s</span><br></div><div class="wu-line"><span class="wu-text" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">1) </span><span class="wu-text wu-bold" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">Dropou</span><span class="wu-text wu-bold" style="color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-size: 14px;">t</span><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line" style="font-size: 14px;"><br></div><div class="wu-line"><br></div><div class="wu-line"><br></div></div>
+</div>
+</body>
+</html>
