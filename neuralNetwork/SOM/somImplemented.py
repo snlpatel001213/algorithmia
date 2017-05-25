@@ -144,17 +144,16 @@ def decayLearningrate(initialLearningRate, timeOrIterations):
     return initialLearningRate * (math.exp(-timeOrIterations / rateOfDecay))
 
 
-def updateWeights(weightAtGivenTime, inputVectorWeight, learningRate):
+def updateWeights(weightAtGivenNeighbour, inputVectorWeight, learningRate):
     """
     will update weight and will return new weights, weights are basically RGB color of the image
-    :param weightAtGivenTime: RGB
+    :param weightAtGivenNeighbour: RGB
     :param inputVectorWeight: RGB
     :return:
     """
     newWeights = []
-    for eachweightNo in range(0, len(weightAtGivenTime)):
-        newweight = weightAtGivenTime[eachweightNo] + (
-            learningRate * (inputVectorWeight[eachweightNo] - weightAtGivenTime[eachweightNo]))
+    for eachweightNo in range(0, len(weightAtGivenNeighbour)):
+        newweight = weightAtGivenNeighbour[eachweightNo] + (learningRate * (inputVectorWeight[eachweightNo] - weightAtGivenNeighbour[eachweightNo]))
         newWeights.append(int(newweight))
     return newWeights
 

@@ -1,0 +1,184 @@
+﻿SMOTE: Synthetic Minority Over-sampling Technique
+
+For theoritical imformationand pseudocode you may reffer read https://www.jair.org/media/953/live-953-2037-jair.pdf
+ 
+
+Imbalance in the dataset is mitigated using SMOTE. suppose we have a dataset one class is nearly 85% and other class is nearly 15%. This is not good for machine learning. Machine learning generally prefers same number of sample for all classes for effective balanced prediction. I have worked with dataset having one class upto 97% and other is about 3% only.
+For this purpose we will be using iris dataset, Iris datset is having 3 class of flower (Iris setosa, Iris virginica and Iris versicolor). Each class is having 50 samples. Our goal is to make unbalance datset balanced so I have deleted 45 samples of Iris-virginica. Now in new dataset we have only 5 sample of Iris-virginica.
+Our gola for this tutorial includes:
+1) to multiply sample of Iris-virginica
+2) to visualize all sample of Iris-virginica and to assertain that newly synthesized sample are simillar to original Iris-virginica samples.
+
+The core idea behind entire algorith is very simple
+1)Lets say we had a iris set with N = 105 samples
+2)Out of N, we have  a class  Iris-virginica having n = 5 samples, And other two classes having 50 samples each
+3)We need to increse number of samples for class  Iris-virginica (minor class)
+4)Each sample in iris dataset having 4 attribute, can be represented in array as [6.3, 3.3, 6.0, 2.5, 'Iris-virginica'] 
+5)First we will find out sample(nearest neighbours) which are very simillar to given minor sample, lets say we got foloowing nearest neighbour [[6.5, 3.0, 5.8, 2.2, 'Iris-virginica'],[6.3, 2.9, 5.6, 1.8, 'Iris-virginica'],[6.4, 2.8, 5.4, 1.9, 'Iris-virginica']]
+6)Out of this nearest neighbour one sample is choosen at random let say we choose 
+[6.5, 3.0, 5.8, 2.2, 'Iris-virginica'] to be the nearest one
+7) a) One minor sample (m) -                          [6.3, 3.3, 6.0, 2.5, 'Iris-virginica']
+    b) Random nearest neighbour (r) -              [6.5, 3.0, 5.8, 2.2, 'Iris-virginica']
+    c) Positive Difference between two (d) -      [0.2, 0.3, 0.2, 0.3]
+    d) Random number between 0 and 1 (i) -    [0.2, 0.8, 0.3, 0.5]
+    e) Synthetic minor sample =  m + d * i -           [6.34, 3.54, 6.06, 2.65, 'Iris-virginica']
+
+Below mentioned funbction perform a sole function to load data
+def loadDataset(filename, numattrs):
+    """
+    loads data from file
+    :param filename:
+    :param numattrs: number of column in file, Excluding  class column
+    :return:
+    """
+    csvfile = open(filename, 'r')
+    lines = csv.reader(csvfile)
+    dataset = list(lines)
+    for x in range(len(dataset)):
+        for y in range(numattrs):
+            dataset[x][y] = float(dataset[x][y])
+    return dataset
+
+Another function we would require is to calculate eucledean distance between attributes of two array:
+def euclideanDistance(instance1, instance2, length):
+    """
+    calculate euclidean distance between two
+    :param instance1:[6.5, 3.0, 5.8, 2.2]
+    :param instance2:[6.3, 2.9, 5.6, 1.8]
+    :param length: 4 length of array
+    :return:
+    """
+    distance = 0
+    for x in range(length):
+        distance += pow((instance1[x] - instance2[x]), 2)
+    return math.sqrt(distance)
+
+If we execute above given function with set of array [6.5, 3.0, 5.8, 2.2] and [6.3, 2.9, 5.6, 1.8] then it will give output as 0.
+euclideanDistance([6.5, 3.0, 5.8, 2.2],[6.3, 2.9, 5.6, 1.8],4)
+Eucledian distance starts from 0.0 (Exaclty simmilar) to any number indictaing how far two objects are.
+
+
+Next function is  getNeighbors.  GetNeighbors function will take three inputs 
+1)entire dataset 2)A minorsample and 3)number of neighbours to be found out
+The mechanism behind this function is,
+1) for a given minor sample find out eucleadian distance with all samples in dataset
+2) sort all samples in ascending order of eucledian distance so that most simillar will come first
+3) from beginning take reuired  number of neighbours to be found out except first sample (The first sample will be the same minor sample from entire dataset -  most simillar)
+
+def getNeighbors(trainingSet, eachMinorsample, k):
+    """
+    will give top k neighbours for given minor sample (eachMinorsample) in dataset (trainingSet)
+    :param trainingSet:  here entire data-set is a training set
+    :param eachMinorsample:
+    :param k: number of nearest neighbours to search for each minor sample value, using Euclidean distance
+    :return: top k neighbours
+    
+    output: # Minor Sample:  [6.3, 3.3, 6.0, 2.5, 'Iris-virginica'] | Neighbours:  [[6.5, 3.0, 5.8, 2.2, 'Iris-virginica'],
+        #                                                                 [6.3, 2.9, 5.6, 1.8, 'Iris-virginica'],
+    """
+    distances = []
+    length = len(eachMinorsample) - 1
+    for x in range(len(trainingSet)):
+        dist = euclideanDistance(eachMinorsample, trainingSet[x], length)  # get euclidean distance for all matches
+        distances.append((trainingSet[x], dist))
+        distances.sort(key=operator.itemgetter(1))  # sort as per distance and get top 3 excluding first one
+        neighbors = []
+    for x in range(k):
+        neighbors.append(distances[x + 1][0])  # X+1 in the sorted list ensure that the minor sample itself is not selected as neighbours
+    return neighbors
+
+function  seperateMinority will seperate all minor samples as per class specified from dataset. This will return an array of all minor samples.
+
+def seperateMinority(dataSet, MinorClassName, classColumnNumber):
+    """
+    will separate given minor class from the entire dataset
+    :param dataSet: Entire dataset
+    :param MinorClassName:  name of minor class, e.g. MinorClassName = "Iris-virginica"
+    :param classColumnNumber: column number where class is present [zero indexed]
+    :return:
+    """
+    minorSamples = []
+    for eachSample in dataSet:
+        if (eachSample[classColumnNumber] == MinorClassName):
+            minorSamples.append(eachSample)
+    return minorSamples
+
+populate is the main function which takes:
+1) N:  factor by which sample needs to be increase, e.g. 2 means twice
+2) minorSample: all minor samples
+3) nnarray: nearest neighbour array   [[2.4, 2.5, 'a'],[2.3, 2.2, 'a'],[2.5, 2.5, 'a']]
+4) numattrs: equals to number of feature (3) , in 0 based index it iterates from
+This function perform actual SMOTE algorithm on datset. It perform following steps
+
+1) take minorsample and nearest neighbours. 
+2) find out difference between attributes of minorsample and nearest neighbours as diff
+3) generate a positive random float number between 0  and 1 known as gap
+4) new attributes of minorsample =  (attributes of minorsample) + gap * difference
+5) As described above, all attribute for a particular sample are generated
+6) such  controlled randomness is added to N number of samples to generate synthetic ones
+
+
+def populate(N, minorSample, nnarray, numattrs):
+    """
+    perform actual algorithm
+    1) take minorsample and nearest neighbours. 
+    2) find out difference between attributes of minorsample and nearest neighbours as diff
+    3) generate a positive random float number between 0  and 1 known as gap
+    4) new attributes of minorsample =  (attributes of minorsample) + gap * difference
+    5) As described above, all attribute for a particular sample are generated
+    6) such  controlled randomness is added to N number of samples to generate synthetic ones
+    
+    :param N:  factor by which sample needs to be increase, e.g. 2 means twice
+    :param minorSample: all minor samples
+    :param nnarray: nearest neighbour array   [[2.4, 2.5, 'a'],[2.3, 2.2, 'a'],[2.5, 2.5, 'a']]
+    :param numattrs: equals to number of feature (3) , in 0 based index it iterates from 0,1,2,3
+    :return:
+    """
+    while (N > 0):
+        nn = randint(0, len(nnarray) - 2)
+        eachUnit = []
+        for attr in range(0, numattrs+1): #[0,1,2,3] iterate over each attribute (feature)
+            diff = float(nnarray[nn][attr]) - (minorSample[nn][attr]) # difference between nearest neighbour and actual minor sample
+            gap = random.uniform(0, 1) # generate a random number between 0 and 1
+            eachUnit.append(minorSample[nn][attr] + gap * diff) # multiply difference with random number and add this to original attribute value
+        for each in eachUnit:
+            syntheticData.write(str(each)+",")
+        syntheticData.write("\n")
+        N = N - 1
+
+
+
+The last function is SMOTE function , which call all these above functions and serve as an entry point for the workflow
+
+k is  number of nearest neighbours to be taken in to consideration  to generate synthetic samples.
+
+def SMOTE(T, N, minorSamples, numattrs, dataSet, k):
+    """
+    :param T = Number of minority class Samples # here we have 5
+    :param k = k mean (clustering value)
+    :param minorSample: all minor samples
+    :param N = "Number of sample to be generated should be more than 100%"
+        Amount of smoted sample required  N%
+    """
+    if (N <= 100):
+        print "Number of sample to be generated should be more than 100%"
+        raise ValueError
+    N = int(N / 100) * T  # N = number of output samples required
+    nnarray = []
+    for eachMinor in minorSamples:
+        # nnarray all nearest neighbour [[2.4, 2.5, 'a'],[2.3, 2.2, 'a'],[2.5, 2.5, 'a']]
+        nnarray = (getNeighbors(dataSet, eachMinor, k))
+    populate(N, minorSamples, nnarray, numattrs)
+
+
+I am not yet done, I have generated syhthetic data but who knows I am right or not. If this woud be 2-D data I would direcltly plot on graph and can visualize but htis is 4-D data, A technique called t-sne (t-Distributed Stochastic Neighbor Embedding ) is used to viusualize multi - dimensional data. If you are unaware about t-sne, go through my previous tutorial. 
+
+After running file visualize.py I got below given Image:
+
+
+Figure. 1 Sampeles of  Iris-virginica bedfore and after applicatiion of SMOTE algorithm
+
+Increase in Dark blue samples clearly represents that we have successfullt synthesized sample for  Iris-virginica
+
+I am currelty working on making this implement multi threaded, Soon will update
+this tutorial.
