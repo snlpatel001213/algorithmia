@@ -1,3 +1,5 @@
+"this is the main file, change input file appropriately and run this script"
+
 import objectDetectUtils
 
 # keras gives too many deprecation warnings, ignoring all warnings
