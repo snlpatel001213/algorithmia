@@ -1,0 +1,2 @@
+before running this tutorial, download required model from below given link and place it here in objectDetect/model directory
+https://drive.google.com/file/d/0B5mEsS-c9HHAdUNtWmo2NDltaTA/view?usp=sharing
