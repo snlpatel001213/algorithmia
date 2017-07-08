@@ -234,7 +234,7 @@ def reocordProgress():
 if __name__ == "__main__":
     """
     to take one file and print some part of progress
-    :return:
+    return:
     """
     global imageObject
     global imageData
