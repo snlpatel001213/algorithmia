@@ -189,9 +189,51 @@ def primaryCode():
         imageObject.save("img1.jpg")
 
 
-def perfectlyWorkingCode():
+def reocordProgress():
     """
-    this code is perfectly working
+    to save each file at interval of 100 changes and save it to 'image' folder
+    :return:
+    """
+    global imageObject
+    global imageData
+    imageObject = Image.open("RGB_Edition_7.jpg")
+    imageData = imageObject.load()
+
+    print imageObject.size
+    width = imageObject.size[0]
+    height = imageObject.size[1]
+    counter = 0
+    for i in range(0, height):
+        for j in range(0, width):
+            inputvector = [i, j]  # [127,130] will print bigger
+            print inputvector
+            # print radius, BMUi, BMUj
+            BMUi, BMUj = findBMU(inputvector[0], inputvector[1], imageData, imageObject)
+            radius = findEucledeanDistanceBetweeenLattice(inputvector, [BMUi, BMUj])
+            initialRadius = radius
+            initalLearningRate = 0.2
+            iteration = 10
+            inputVectorWeight = getRGBForPixel(imageData, inputvector[0], inputvector[1])
+            for iterationNo in range(0, iteration):
+                decayedRadius = decayRadius(initialRadius, iterationNo)
+                decayedLearningrate = decayLearningrate(initalLearningRate, iterationNo)
+                if decayedRadius > 10:
+                    decayedRadius = 5
+                    neighbours = findNeighbours([BMUi, BMUj], decayedRadius, imageData, imageObject)
+                else:
+                    neighbours = findNeighbours([BMUi, BMUj], decayedRadius, imageData, imageObject)
+                # print neighbours
+                for eachNeighbour in neighbours:
+                    R, G, B = getRGBForPixel(imageData, eachNeighbour[0], eachNeighbour[1])
+                    newWeights = updateWeights([R, G, B], inputVectorWeight, decayedLearningrate)
+                    setRGBforPixel(imageData, eachNeighbour[0], eachNeighbour[1], newWeights)
+            if counter%100 == 0:
+                imageObject.save("image/"+str(counter)+".jpg")
+            counter = counter+1
+
+if __name__ == "__main__":
+    """
+    to take one file and print some part of progress
     :return:
     """
     global imageObject
@@ -227,43 +269,3 @@ def perfectlyWorkingCode():
                     newWeights = updateWeights([R, G, B], inputVectorWeight, decayedLearningrate)
                     setRGBforPixel(imageData, eachNeighbour[0], eachNeighbour[1], newWeights)
             imageObject.save("img1.jpg")
-
-
-
-# lets take each file
-global imageObject
-global imageData
-imageObject = Image.open("RGB_Edition_7.jpg")
-imageData = imageObject.load()
-
-print imageObject.size
-width = imageObject.size[0]
-height = imageObject.size[1]
-counter = 0
-for i in range(0, height):
-    for j in range(0, width):
-        inputvector = [i, j]  # [127,130] will print bigger
-        print inputvector
-        # print radius, BMUi, BMUj
-        BMUi, BMUj = findBMU(inputvector[0], inputvector[1], imageData, imageObject)
-        radius = findEucledeanDistanceBetweeenLattice(inputvector, [BMUi, BMUj])
-        initialRadius = radius
-        initalLearningRate = 0.2
-        iteration = 10
-        inputVectorWeight = getRGBForPixel(imageData, inputvector[0], inputvector[1])
-        for iterationNo in range(0, iteration):
-            decayedRadius = decayRadius(initialRadius, iterationNo)
-            decayedLearningrate = decayLearningrate(initalLearningRate, iterationNo)
-            if decayedRadius > 10:
-                decayedRadius = 5
-                neighbours = findNeighbours([BMUi, BMUj], decayedRadius, imageData, imageObject)
-            else:
-                neighbours = findNeighbours([BMUi, BMUj], decayedRadius, imageData, imageObject)
-            # print neighbours
-            for eachNeighbour in neighbours:
-                R, G, B = getRGBForPixel(imageData, eachNeighbour[0], eachNeighbour[1])
-                newWeights = updateWeights([R, G, B], inputVectorWeight, decayedLearningrate)
-                setRGBforPixel(imageData, eachNeighbour[0], eachNeighbour[1], newWeights)
-        if counter%100 == 0:
-            imageObject.save("image/"+str(counter)+".jpg")
-        counter = counter+1
