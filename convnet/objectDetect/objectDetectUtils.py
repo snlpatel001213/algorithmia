@@ -1,33 +1,11 @@
-import os
-import os.path as path
-import re
-import traceback
-from tempfile import mkdtemp
-
-import keras
-import matplotlib.pyplot as plt
-import numpy as np
-import theano
-from PIL import Image
 from keras import backend as K
 from keras.layers.convolutional import Convolution2D, MaxPooling2D, ZeroPadding2D
-from keras.layers.core import Flatten, Dense, Dropout, Activation
+from keras.layers.core import Flatten, Dense, Dropout
 from keras.models import Sequential
 from keras.optimizers import SGD
-from keras.utils import np_utils
-from keras.utils.np_utils import to_categorical
-from scipy.misc import imread, imresize, imsave
 
 K.set_image_dim_ordering('th')
-import traceback
-from scipy import ndimage
-from sklearn.cross_validation import train_test_split
-from keras import callbacks
-import glob
-from shutil import copyfile
 from keras.preprocessing import image
-from keras.models import Model
-import numpy as np
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
@@ -42,7 +20,7 @@ class objectDetectutils():
         """
         # defining convolutional network
         model = Sequential()
-        model.add(ZeroPadding2D((1, 1), batch_input_shape=(1,3, 224,224)))
+        model.add(ZeroPadding2D((1, 1), batch_input_shape=(1, 3, 224, 224)))
         model.add(Convolution2D(64, 3, 3, activation='relu'))
         model.add(ZeroPadding2D((1, 1)))
         model.add(Convolution2D(64, 3, 3, activation='relu'))
@@ -102,10 +80,9 @@ class objectDetectutils():
         """
         img = image.load_img(img_path, target_size=(224, 224))
         x = image.img_to_array(img)
-        x = x.reshape(1,x.shape[0],x.shape[1],x.shape[2])
+        x = x.reshape(1, x.shape[0], x.shape[1], x.shape[2])
         # print "SHAPE OF THE IMAGE", x.shape
         return x
-
 
     def getClassName(self, probabilities):
         """
@@ -433,22 +410,21 @@ class objectDetectutils():
         count = 0
         for eachprob in probabilities:
             tempDict[eachprob] = count
-            count = count +1
+            count = count + 1
         top = 0
 
         # sorting to get top 5 predictions
-        topPredictions={}
-        for eachkey in sorted(tempDict,reverse=True):
+        topPredictions = {}
+        for eachkey in sorted(tempDict, reverse=True):
             Name = class_names[tempDict[eachkey]]
             Percentage = eachkey
-            topPredictions[Name]=round(Percentage*100,3)
+            topPredictions[Name] = round(Percentage * 100, 3)
             if top == 5:
                 break
-            top = top +1
+            top = top + 1
         return topPredictions
 
-
-    def writeToImage(self,imagePath,predictedClass):
+    def writeToImage(self, imagePath, predictedClass):
         """
         take original image and write top five predicted classes to it.
         :param imagePath: relative path to image 
@@ -462,8 +438,9 @@ class objectDetectutils():
         font = ImageFont.truetype("fonts/adventpro-bold.ttf", fontHeight)
         verticleDistance = 0
         predictedClassSorted = {v: k for k, v in predictedClass.iteritems()}
-        for eachkey in sorted(predictedClassSorted,reverse=True):
+        for eachkey in sorted(predictedClassSorted, reverse=True):
             # print eachkey, predictedClassSorted[eachkey]
-            draw.text((0, verticleDistance), str(eachkey)+" %" + " : "+str(predictedClassSorted[eachkey]) , (0, 0, 0), font=font)
-            verticleDistance = verticleDistance+fontHeight
-        img.save('processedImages/'+filename)
+            draw.text((0, verticleDistance), str(eachkey) + " %" + " : " + str(predictedClassSorted[eachkey]),
+                      (0, 0, 0), font=font)
+            verticleDistance = verticleDistance + fontHeight
+        img.save('processedImages/' + filename)
