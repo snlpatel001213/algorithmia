@@ -1,0 +1,464 @@
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 2.6718 - acc: 0.2610   
+(0, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,
+in the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 1.9750 - acc: 0.4259   
+(1, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,
+
+i love you and i love you
+
+i love you and i love you
+
+i love you and i love you
+
+i love you and i love you
+
+i love you and i love you
+
+i love you and i love you
+
+i love you and i love you
+
+i love you and i love you
+
+i love you and i love you
+
+i love you and i love you
+
+i love
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 1.7319 - acc: 0.4875   
+(2, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, i want to start
+i want to be the stars i can see the stars
+i want to be the stars i can see the stars
+i want to start to start to start
+i want to be the stars i can see the stars
+i want to start to start to start
+i want to be the stars i can see the stars
+i want to start to start to start
+i
+Epoch 1/1
+283856/283856 [==============================] - 354s - loss: 1.5728 - acc: 0.5298   
+(3, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, i want to see the say
+
+i want to be the way that i start to see
+
+i want to be the winds and the some
+
+i want to the winds to see
+
+i want to be the one that i say i some
+i wanna love you to see
+
+i want to be the winds and the some
+
+i want to be the winds and the some
+
+i want to be the
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 1.4498 - acc: 0.5620   
+(4, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, the world of the way that i start to see
+the world we have to say
+i would do anything it all the stare
+i want to say it all the stare
+i want to say it all the stare
+i want to say it all the stare
+i want to say it all the stare
+i want to say it all the stare
+i want to say it all the stare
+i
+Epoch 1/1
+283856/283856 [==============================] - 354s - loss: 1.3513 - acc: 0.5902   
+(5, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, i want to start to stay
+i want to start to stay
+i want to start to stay
+i want to start to stay
+i want to start to stay
+i want to start to stay
+i want to start to stay
+i want to start to stay
+i want to start to stay
+i want to start to stay
+i want to start to stay
+i want to start to stay
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 1.2682 - acc: 0.6140   
+(6, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, there's no one the wind of love
+
+i would do anything for love
+you will be there in your eyes
+and i was a friend
+i wanna be the one that i can see
+
+i was what i can say
+i would do anything for love
+you will be there in your eyes
+and i was a friend
+i wanna be the one that i can see
+
+i wa
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 1.1944 - acc: 0.6367   
+(7, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, i'll be there
+
+i wanna hell you time
+i want to have you say
+i want you to my heart
+
+i wanna have you to my heart
+
+i wanna have you to my heart
+
+i wanna have you to my heart
+
+i wanna have you to my heart
+
+i wanna have you to my heart
+
+i wanna have you to my heart
+
+i wanna have you 
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 1.1267 - acc: 0.6569   
+(8, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, to say you love me too
+the touch of your eyes
+i wanna hell you thinking of
+i would do anything for love
+you and me now to the way that you love
+and i know i wanna hell you to me
+
+i would do anything for love
+anything you've been dreaming of, i would do anything for love
+anything you've bee
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 1.0640 - acc: 0.6754   
+(9, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, they are the wind you will i stay
+i will be there with you i was for you
+
+i wanna know what i can say
+i would do anything for love
+i want you to know i want to know
+i wanna know what i can say
+i would do anything for love
+i want you to know i want to know
+i wanna know what i can say
+i wou
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 1.0049 - acc: 0.6930   
+(10, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, i'll be there
+i will be there i will be there
+
+i will be there i will be there
+
+i wanna hold you back to me
+
+i wanna hold you bore
+this words i can say
+i love you so much to see you are all i have to say you love me to be when i couldn't see
+you say it best when i thought i can say
+i lov
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.9494 - acc: 0.7107   
+(11, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, they can say you'll be there
+
+i can say it all the love i can see
+i know it's not that i can do it
+
+i can do that
+i would do anything for love
+anything you've been dreaming of, but i just won't do that
+i would do anything for love
+anything you've been dreaming of, but i just won't do that
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.8972 - acc: 0.7259   
+(12, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,
+i'll be there to know that i don't got a friend
+and i know that you are the wind beneath my wings.
+
+and i know that it's all alone
+
+and i know that it's gonna be
+and i know that it makes
+i'll be there to know that i don't go
+a love will find a way
+
+i want you to say that you were to stay
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.8487 - acc: 0.7406   
+(13, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,
+i'm so inside you all the love that seems one to betind to the way that i do
+
+[chorus:]
+i know that it's gree
+i'm home
+i can't live
+if you say i love you
+
+[chorus:]
+i know that it's grow to say
+i would do anything for love
+anything you've been dreaming of, but i just won't do that
+i wo
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.8089 - acc: 0.7525   
+(14, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,
+i know i'll never love this way again
+when you are the world won't take me away on the one who wands to say
+i want to know i know i love you
+and i know i'll never love this way again
+
+i wanna hold you to can make it all again
+
+and i wonder what you are the one who make a day
+i wanna hold y
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.7691 - acc: 0.7632   
+(15, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,
+to see you once again... my love.
+
+i'll go with you
+i can see it in your eyes
+i can see it in your eyes
+i can see it in your eyes
+i can see it in your eyes
+i can see it in your eyes
+i can see it in your eyes
+i can see it in your eyes
+i can see it in your eyes
+i can see it in your eyes
+
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.7291 - acc: 0.7763   
+(16, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, to say you love me too
+the truth i see the sun is strong
+and i know that you're more that you want to show
+
+i can wait forever if you will
+i know it's not to say you love me too
+to say i love you, love you agains
+i wanna fool you tonight
+
+[chorus:]
+i don't know what it's like to see you s
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.6985 - acc: 0.7850   
+(17, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, they can't get through the rain
+and the sound of my heart and crysing
+and i feel high and says
+i would do anything for love
+i'll be there (i'll be there)
+
+there's nothing that i want you
+
+the way you love me
+the world goes still in your hand
+
+i love you, i love you
+and i can see it in y
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.6895 - acc: 0.7886   
+(18, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,
+i'm so inside you and i know that it's true
+i'll be the refter in the sky and shining through
+and i can make it all for love
+i'll be the refter from the love to the
+
+and i'll be there
+
+[chorus]
+
+i need you so i sing
+i know you can show me
+
+you know i don't mind that love is a love that
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.6423 - acc: 0.8013   
+(19, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, they can have the place i love you
+
+i can see the rain that sing a words for friend
+i can't wait to let you forever
+and i know that you want to be the same
+and i can't wait to feel you touching me again
+with you, i'm just another woman in love
+
+all the seas from that way it all feel the sam
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.6143 - acc: 0.8089   
+(20, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, they can have it all alone
+
+i wanna hold you till the way you looking be
+i know i'll never love this way again
+so i keep holdin' on
+i've got this feeling so long
+
+i won't do that i want to fool you tonight
+
+i'll never love this way again
+hold on, hold on, hold on
+
+i know i love you, i w
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.5896 - acc: 0.8159   
+(21, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, at the stars
+and the solds of seed
+all i know the truth
+i will be there
+i will be there
+
+[chorus:]
+i know that you ever get above you
+i can't go was your heart
+and i swear (you say it best
+your love so make you come to me
+you are the one i want to be
+
+[chorus:]
+i know that you stay i 
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.5662 - acc: 0.8227   
+(22, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,
+there's a love i say i do
+when i need you
+i just will love you so, for always
+
+and i won't do that
+
+[girl:]
+will you hold me angel of the morning, angel
+just touch my cheek before you leave me, baby
+just look at the highleas along to me
+and i know that it's conetting let it be
+a life in
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.6562 - acc: 0.7993   
+(23, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, they'll gave it all for one and all for love.
+
+[boy:]
+i can do that
+i can do that
+
+[girl:]
+i can say it our love will lead me to be
+the way that i want to be
+
+those you won't be there
+i'll be the walking for love
+i'll be the heaven love was more than walking,
+and i know that i'm here t
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.5379 - acc: 0.8316   
+(24, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, they're a firing in your eyes
+and the words are all of my tears
+and the songs that heaven he wonder
+
+it will be the words of a show the one thing
+i want to this forlies
+in the sound
+of a lifetime alone
+
+i love you, i love you
+oh yes i love you
+oh you are my without your heart
+you are al
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.5163 - acc: 0.8380   
+(25, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, this world and hold on town and she where i find your love
+i need your love
+that show she thiss you fall in love
+and i know that it's true in my heart
+i will upst on your stars
+the smile on your face
+the way that you taste
+your love is love
+and i'll be there
+
+[love versied this way
+throu
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.4978 - acc: 0.8432   
+(26, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,
+i'm not watching me for at you
+i'm just another woman in love
+a kid out of school
+a fire out of control
+just another fool
+you touch me and i'm weak
+i'm a feather in the wind
+and i can't wait to feel you touching me again
+with you, i'm just another woman in love
+and i don't want to live fo
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.4779 - acc: 0.8492   
+(27, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake, they can't take the man
+when you say you love me
+the world goes still, so still inside a lot
+where there's to make the sun
+and as we gan
+in the mindle of a dream
+i need to know
+that you are not alone
+i am here with you
+though we're far apart
+you're always in my heart
+you are not alone
+i
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.4616 - acc: 0.8541   
+(28, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,
+this time i'll hold you forever
+this time we'll never end
+
+now i'm seen blind i fall in love again
+i'll be the refter of you and me
+i've watched some day for you and me in my arms
+i can see the truth in your eyes
+your sorrow show
+yes it shows
+all you start and say it all burned as a stark
+Epoch 1/1
+283856/283856 [==============================] - 353s - loss: 0.4476 - acc: 0.8576   
+(29, 'Seed', "i'll be the fire in your night. then it's love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,")
+follow up with: s love you take. i will defend, i will fight. i'll be there when you need me. when honor's at stake,
+that i am and easy try to stay
+there is a sturd on your
+i know that you stay
+there's no way you can deep it together
+and now that i've found you
+love will find a way
+
+i was be there i believe in you
+
+and i want to walk through the night
+when you have the time i was there
+
+i won't be ba

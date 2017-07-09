@@ -1,0 +1,120 @@
+Epoch 1/1
+916951/916951 [==============================] - 1134s - loss: 1.9523 - acc: 0.4425  
+(0, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i was a lot of the wish the wis the wis the wish the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis the wis th
+Epoch 1/1
+916951/916951 [==============================] - 1127s - loss: 1.4231 - acc: 0.5759  
+(1, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i was a lot of the polls that we have to get to the worth that we have to get to the way, i was to go to the world that we have to get to the way, i was to go to the world that we have to get to the way, i was to go to the world that we have to get to the way, i was to go to the world that we have 
+Epoch 1/1
+916951/916951 [==============================] - 1124s - loss: 1.9906 - acc: 0.4346  
+(2, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i doung to thing the pare of the proble money and the and the and the amere and the people the and the parting the people that have to be the way, in the amerecand the people of the problem in the americand that are the on the parting of the and in the wand the american people that the pronem in th
+Epoch 1/1
+916951/916951 [==============================] - 1124s - loss: 1.7647 - acc: 0.4797  
+(3, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i want to be the politing the people they don’t want to be the way and the wants the people they do they do the proble that we have to be a lot of the way they do they do they do it was a said the way a lot of the proble the people that we have to be the problem. i want to get the proble that we 
+Epoch 1/1
+916951/916951 [==============================] - 1124s - loss: 1.5045 - acc: 0.5514  
+(4, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i want to be a lot of the way it was a great the problem that we have to be a lot of the way it was a great the problem that we have to be a lot of the way it was a great the problem that we have to be a lot of the way it was a great the problem that we have to be a lot of the way it was a great th
+Epoch 1/1
+916951/916951 [==============================] - 1123s - loss: 1.4027 - acc: 0.5791  
+(5, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i want to be the political is a lot of the people that was a great people that was a great people that was a great people that was a great people that was a great people that was a great people that was a great people that was a great people that was a great people that was a great people that was 
+Epoch 1/1
+916951/916951 [==============================] - 1123s - loss: 1.3061 - acc: 0.6056  
+(6, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i want to be a lot of the politicians and the way it was a great again. i want to be a lot of the politicians and the way it was a great again. i want to be a lot of the politicians and the way it was a great again. i want to be a lot of the politicians and the way it was a great again. i want to b
+Epoch 1/1
+916951/916951 [==============================] - 1123s - loss: 1.2439 - acc: 0.6225  
+(7, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i was a great people and they don’t want to be a lot of the best of the people that are going to be a lot of the best of the people that are going to be a lot of the best of the people that are going to be a lot of the best of the people that are going to be a lot of the best of the people that a
+Epoch 1/1
+916951/916951 [==============================] - 1123s - loss: 1.1992 - acc: 0.6344  
+(8, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i was a great people and the world that was a great people and they don’t want to be a lot of the people that want to be a lot of the people that want to be a lot of the people that want to be a lot of the people that want to be a lot of the people that want to be a lot of the people that want to
+Epoch 1/1
+916951/916951 [==============================] - 1124s - loss: 1.1647 - acc: 0.6444  
+(9, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i was a great people. i want to be a lot of the people and they want to be a lot of the people. i want to be a lot of the people. i want to be a lot of the people. i want to be a lot of the people. i want to be a lot of the people. i want to be a lot of the people. i want to be a lot of the people.
+Epoch 1/1
+916951/916951 [==============================] - 1124s - loss: 1.1365 - acc: 0.6516  
+(10, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. they want to take care of the people are going to be a lot of money to the things that we have to be a lot of money and they don’t want to be a lot of money to the things that we have to be a lot of money and they don’t want to be a lot of money to the things that we have to be a lot of money a
+Epoch 1/1
+916951/916951 [==============================] - 1124s - loss: 1.1128 - acc: 0.6588  
+(11, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i was a great company that we have to be a lot of things. i want to be a lot of things. i want to be a lot of things. i want to be a lot of things. i want to be a lot of things. i want to be a lot of things. i want to be a lot of things. i want to be a lot of things. i want to be a lot of things. i
+Epoch 1/1
+(12, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. the world that we have to do it and the world that we have to do it. i don’t know what they don’t want to be a lot of money. i don’t know what they don’t want to be a lot of money. i don’t know what they don’t want to be a lot of money. i don’t know what they don’t want to be a lot 
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 1.0740 - acc: 0.6690  
+(13, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. it’s a great company that we have to do it. we have to do it. we have to do it. i want to be a lot of money to do it. i want to be a lot of money to do it. i want to be a lot of money to do it. i want to be a lot of money to do it. i want to be a lot of money to do it. i want to be a lot of money
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 1.0593 - acc: 0.6729  
+(14, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. the worst thing is the only one of the problem is the way it was a great person and the press wants to be a lot of money. i want to be a lot of money. i don’t know what they’re going to be a lot of money. i don’t know what they’re going to be able to do it. i don’t know what they’re goi
+Epoch 1/1
+916951/916951 [==============================] - 1124s - loss: 1.0447 - acc: 0.6769  
+(15, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i will never ever be the worst thing in the world. i was a great people and i was a great people and i was a great people and i was a great people and the press was a great people and i was a great people and i was a great people and i was a great people and i was a great people and the press was a
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 1.0345 - acc: 0.6800  
+(16, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i was a great deal and i said, "what do you want to do it?" i said, "what do you want to do it?" i said, "what do you want to do it?" i said, "what do you want to do it?" i said, "what do you want to do it?" i said, "what do you want to do it?" i said, "what do you want to do it?" i said, "what do 
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 1.0209 - acc: 0.6835  
+(17, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. they want to be a lot of the states and they don’t know what they’re going to be a lot of the people of the polls. we’re going to be so good to me and they’re going to be a lot of the people of the people of the polls. we’re going to be a lot of the people of the polls. we’re going to b
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 1.0098 - acc: 0.6864  
+(18, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. the world was a great people. i don’t know what the world is a great people. i don’t know what the people that are the same thing that we have to be a lot of money. we have to be a lot of money. we have to be a lot of money. we have to be a lot of money. we have to be a lot of money. we have to
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 1.0002 - acc: 0.6886  
+(19, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. the whole thing we have the world is a great company and they want to do it. i want to do it. i want to do it. i want to do it. i want to do it. i want to do it. i want to do it. i want to do it. i want to do it. i want to do it. i want to do it. i want to do it. i want to do it. i want to do it. i
+Epoch 1/1
+916951/916951 [==============================] - 1124s - loss: 0.9911 - acc: 0.6915  
+(20, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. the world was a great company that we have to be a lot of money. we have to be a lot of money. we have to be a lot of money. we have to be a lot of money. we have to be a lot of money. we have to be a lot of money. we have to be a lot of money. we have to be a lot of money. we have to be a lot of m
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 0.9823 - acc: 0.6939  
+(21, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. the world is a great people and the press where i was a great job. i want to be a lot of money. i want to take care of our vets. we have to be a lot of money. we have to be a lot of money. we have to be a lot of money. we have to be a lot of money. we have to be a lot of money. we have to be a lot 
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 0.9728 - acc: 0.6964  
+(22, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. it’s a great company. i was a great deal for the world trade deals. i was a problem. i was a problem. i was a problem. i was a problem. i was a problem. i was a problem. i was a friend of mine who was a great deal for the american people and the world will be a lot of things that are the worst th
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 0.9664 - acc: 0.6983  
+(23, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. i will tell you that i was a great people. i was the one that was a great deal with the statement that i said the state of the state of the state is a great deal for the state of the state of the states and the state of the states are the second amendment that we have to be a lot of them back. they
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 0.9593 - acc: 0.7003  
+(24, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. the worst thing that i was a great company and i was a great company and i was a great company and i was a great company and i was a great company and i was a great company and i was a great company and i was a great company and i was a great company and i was a great company and i was a great comp
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 0.9521 - acc: 0.7024  
+(25, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. it will be a major that we have to be a man of the world trade deals. we have to stop it. we have to be smart. we have to do it. we have to be smart. we have to do it. we have to be smart. we have to do it. we have to be smart. we have to do it. we have to be smart. we have to do it. we have to be 
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 0.9441 - acc: 0.7045  
+(26, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. the worst thing that i was a statement and i said, "what do you think? i don’t know what the hell he does that?" i said, "what do you think? i don’t know what the hell he does that?" i said, "what do you think? i don’t know what the hell he does that?" i said, "what do you think? i don’t kn
+Epoch 1/1
+916951/916951 [==============================] - 1126s - loss: 0.9373 - acc: 0.7061  
+(27, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. the world was a friend of mine who was a total disaster. i was a tough country. i was a tough country. i was a tough country. i was the one that had a great deal with the world that i was the worst thing in the world, and i was a tough country. i was a tough country. i was the one that had a great 
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 0.9309 - acc: 0.7077  
+(28, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. the world is a statement that was a total disaster. i was a great company and i said, "what are you going to go to the country and they do it?" i said, "what do you think? i don’t know what the hell is it was a tough country. i don’t know what they do is that i don’t know what they do is that
+Epoch 1/1
+916951/916951 [==============================] - 1125s - loss: 0.9255 - acc: 0.7093  
+(29, 'Seed', 'yet hillary clinton, for months, and despite so many attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday.')
+follow up with: ny attacks, repeatedly refused to even say the words radical islam until i challenged her yesterday. the world is a great company. i was a tough company. i was a tough company. i was a tough country. i was a great person. i was a tough country. i was a tough country. i was a tough country. i was a tough country. i was a great person. i was a tough country. i was a tough country. i was a tough coun
+In [ ]:
