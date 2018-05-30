@@ -8,3 +8,5 @@ Please refer to [http://www.machinelearningpython.org](http://www.machinelearnin
 - Artificial Neural Networks
 - Many other machine learning releted topics
 
+https://www.quora.com/anonymous/9e6189bd68948448ece999778457fae
+
