@@ -1,0 +1,37 @@
+from glove import Corpus, Glove
+from gensim.test.utils import common_texts, get_tmpfile
+import multiprocessing
+
+
+
+# Open and read in text
+text_file = open('pg1787.txt')
+text = text_file.read().splitlines()
+text_file.close()
+
+splitted = [i.split(" ") for i in text]
+
+cores = multiprocessing.cpu_count()
+
+corpus = Corpus()
+corpus.fit(splitted, window=10)
+
+glove = Glove(no_components=300, learning_rate=0.05)
+glove.fit(corpus.matrix, epochs=30, no_threads=4, verbose=True)
+glove.add_dictionary(corpus.dictionary)
+
+glove.save('glove.model')
+
+from tensorboardX import SummaryWriter
+writer = SummaryWriter()
+
+words = []
+dense_vectors = []
+for i,keys in enumerate(glove.dictionary.keys()):
+    print(keys)
+    dense_vectors.append(glove.word_vectors[i].reshape(-1))
+    words.append(keys)
+writer.add_embedding(torch.Tensor(np.array(dense_vectors)), words)
+writer.export_scalars_to_json("./all_scalars_2.json")
+writer.close()
+
