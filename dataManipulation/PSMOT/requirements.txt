@@ -175,7 +175,7 @@ stem==1.4.0
 sympy==1.0
 tables==3.2.2
 Tempita==0.5.2
-tensorflow==0.8.0
+tensorflow==1.15.0
 terminado==0.5
 Theano==0.8.2
 thinc==5.0.8
