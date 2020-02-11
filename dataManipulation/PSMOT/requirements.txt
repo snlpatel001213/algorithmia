@@ -34,7 +34,7 @@ dask==0.8.1
 datashape==0.5.1
 decorator==4.0.9
 dill==0.2.4
-Django==1.9.5
+Django==1.11.28
 docutils==0.12
 dynd==0.7.3.dev1
 enum34==1.1.2
