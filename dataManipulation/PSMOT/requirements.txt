@@ -114,7 +114,7 @@ playsound==1.2.1
 ply==3.8
 preshed==0.46.4
 protobuf==3.0.0b2
-psutil==4.1.0
+psutil==5.6.6
 psycopg2==2.6.1
 ptyprocess==0.5
 py==1.4.31
