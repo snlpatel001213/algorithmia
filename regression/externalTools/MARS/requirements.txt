@@ -126,7 +126,7 @@ pycrypto==2.6.1
 pycurl==7.19.5.3
 pyflakes==1.1.0
 pyglet==1.2.4
-Pygments==2.1.1
+Pygments==2.7.4
 PyMySQL==0.7.10
 pyOpenSSL==0.15.1
 pyparsing==2.0.3
