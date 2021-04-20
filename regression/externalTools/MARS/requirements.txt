@@ -183,7 +183,7 @@ traitlets==4.2.1
 unicodecsv==0.14.1
 Unidecode==0.4.19
 validators==0.10.3
-Werkzeug==0.11.4
+Werkzeug==0.15.3
 xlrd==0.9.4
 XlsxWriter==0.8.4
 xlwt==1.0.0
