@@ -108,7 +108,7 @@ pbr==1.9.1
 pep8==1.7.0
 pexpect==4.0.1
 pickleshare==0.5
-Pillow==3.1.1
+Pillow==8.2.0
 plac==0.9.6
 playsound==1.2.1
 ply==3.8
