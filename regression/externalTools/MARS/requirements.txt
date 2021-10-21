@@ -3,7 +3,7 @@ anaconda-client==1.4.0
 anaconda-navigator==1.1.0
 argcomplete==1.0.0
 astropy==1.1.2
-Babel==2.2.0
+Babel==2.9.1
 backports-abc==0.4
 backports.ssl-match-hostname==3.4.0.2
 BeautifulSoup==3.2.1
