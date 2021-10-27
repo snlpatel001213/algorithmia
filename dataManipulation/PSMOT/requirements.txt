@@ -30,7 +30,7 @@ cycler==0.10.0
 cymem==1.31.2
 Cython==0.23.4
 cytoolz==0.7.5
-dask==0.8.1
+dask==2021.10.0
 datashape==0.5.1
 decorator==4.0.9
 dill==0.2.4
