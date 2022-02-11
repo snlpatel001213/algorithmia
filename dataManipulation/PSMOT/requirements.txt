@@ -113,7 +113,7 @@ plac==0.9.6
 playsound==1.2.1
 ply==3.8
 preshed==0.46.4
-protobuf==3.0.0b2
+protobuf==3.15.0
 psutil==4.1.0
 psycopg2==2.6.1
 ptyprocess==0.5
