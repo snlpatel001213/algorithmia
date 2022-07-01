@@ -96,7 +96,7 @@ numexpr==2.5
 numpy==1.10.4
 odo==0.4.2
 omdb==0.7.0
-openpyxl==2.3.2
+openpyxl==2.4.2
 pandas==0.18.0
 partd==0.3.2
 path.py==0.0.0
