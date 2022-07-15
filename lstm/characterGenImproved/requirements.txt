@@ -42,7 +42,7 @@ datashape==0.5.4
 decorator==4.0.11
 dill==0.2.6
 Distance==0.1.3
-distributed==1.16.3
+distributed==2021.10.0
 docutils==0.13.1
 elasticsearch==5.3.0
 en-core-web-md==1.2.0
