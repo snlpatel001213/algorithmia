@@ -85,7 +85,7 @@ mpmath==0.19
 msgpack-python==0.4.8
 multipledispatch==0.4.8
 murmurhash==0.26.4
-nbconvert==4.1.0
+nbconvert==6.5.1
 nbformat==4.0.1
 neo4jdb==0.0.9
 networkx==1.11
