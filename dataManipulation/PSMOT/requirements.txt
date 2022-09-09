@@ -80,7 +80,7 @@ lxml==3.6.0
 MarkupSafe==0.23
 matplotlib==1.5.1
 mechanize==0.2.5
-mistune==0.7.2
+mistune==0.8.1
 mpmath==0.19
 msgpack-python==0.4.8
 multipledispatch==0.4.8
