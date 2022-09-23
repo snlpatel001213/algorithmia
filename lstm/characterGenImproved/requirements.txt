@@ -135,7 +135,7 @@ plac==0.9.6
 ply==3.10
 preshed==1.0.0
 prompt-toolkit==1.0.14
-protobuf==3.3.0
+protobuf==3.18.3
 psutil==5.2.2
 ptyprocess==0.5.1
 py==1.4.33
